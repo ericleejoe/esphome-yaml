@@ -149,13 +149,18 @@ media_player:
   - platform: speaker
     name: None
     id: speaker_media_player
-    volume_min: 0.5
-    volume_max: 0.8
+    volume_min: 0.0
+    volume_max: 1.0
     announcement_pipeline:
       speaker: i2s_speaker
       format: FLAC
       sample_rate: 48000
-      num_channels: 1  # Atom Echo S3R only has one output channel
+      num_channels: 1
+    media_pipeline:
+      speaker: i2s_speaker
+      format: FLAC
+      sample_rate: 48000
+      num_channels: 1
     files:
       - id: wake_word_triggered_sound
         file: ${wake_word_triggered_sound_file}
