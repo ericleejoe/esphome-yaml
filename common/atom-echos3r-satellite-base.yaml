@@ -242,7 +242,7 @@ micro_wake_word:
             - not:
                 media_player.is_announcing:
             - not:
-                speaker.is_playing:
+                speaker.is_playing: i2s_speaker
 
     - voice_assistant.start:
         wake_word: !lambda return wake_word;
@@ -273,7 +273,7 @@ voice_assistant:
             - not:
                 media_player.is_announcing:
             - not:
-                speaker.is_playing:
+                speaker.is_playing: i2s_speaker
     # Restart only mWW if enabled; streaming wake words automatically restart
     - if:
         condition:
