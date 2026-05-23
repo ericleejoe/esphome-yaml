@@ -145,7 +145,7 @@ speaker:
     channel: left
     audio_dac: es8311_dac
   - platform: mixer
-    id: mixer_speaker
+    id: speaker_mixer
     num_channels: 1
     output_speaker: i2s_speaker
     source_speakers:
